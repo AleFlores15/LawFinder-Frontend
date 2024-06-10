@@ -197,6 +197,7 @@ const RegisterCase = () => {
             <button type="button" onClick={() => handleInvitation("lawyer")}>Enviar invitación</button>
             {status === 'lawyerNotFound' && <p>Abogado no registrado</p>}
             {status === 'lawyerFound' && <p>Invitación enviada a {formData.lawyerEmail} </p>}
+            {status === 'invalidEmail' && <p>Correo inválido</p>}
           </div>
           <div className="form-field-invitation-rc">
             <label>Invitar cliente *</label>
