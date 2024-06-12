@@ -63,7 +63,7 @@ const AssetClassification = () => {
                       <td>{asset.crime}</td>
                       <td>{format(new Date(asset.startDate), 'dd/MM/yyyy')}</td>
                       <td>
-                      {/* {asset.confidentiality === "Publica" && (
+                      {asset.confidentiality === "Publica" && (
                         <div className="classification-info">
                             <div className="green-circle"></div>
                             <span>Publica</span>
@@ -80,11 +80,10 @@ const AssetClassification = () => {
                             <div className="red-circle"></div>
                             <span>Confidencial</span>
                         </div>
-                       )} */}
-                       Sin clasificar
+                       )}
                     </td>
                     <td>
-                      <button className="asset-classification-edit-button">Añadir Clasificación</button>
+                      <button className="asset-classification-edit-button"> Re-Clasificar</button>
                     </td>
 
                     </tr>

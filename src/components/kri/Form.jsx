@@ -203,10 +203,8 @@ const ClassificationForm = () => {
         />
         Bajo (1)
         <p>
-          La indisponibilidad de esta información, ya sea permanente o por un
-          periodo considerable de tiempo, no causaría un daño significativo a la
-          organización. Los procesos críticos, las finanzas y la estructura
-          organizacional no se verían afectados de manera importante.
+        Esta información no permite identificar de manera específica a una persona natural o jurídica.
+         Se refiere a atributos generales y no contiene datos que, por sí solos, puedan usarse para identificar a un cliente individual.
         </p>
       </label>
       <label>
@@ -218,11 +216,8 @@ const ClassificationForm = () => {
         />
         Medio (5)
         <p>
-          La falta de disponibilidad de esta información podría afectar ciertos
-          procesos críticos, causar problemas legales menores, o provocar
-          inconvenientes financieros y organizacionales limitados. Requiere
-          medidas adecuadas para garantizar su disponibilidad, aunque no
-          estrictas.
+        Esta información puede contener datos que, aunque no identifican directamente a una persona natural o jurídica, pueden hacerlo cuando se combinan con otros datos. 
+        Es información que debe ser manejada con cierta precaución.
         </p>
       </label>
       <label>
@@ -234,10 +229,8 @@ const ClassificationForm = () => {
         />
         Alto (10)
         <p>
-          La falta de disponibilidad de esta información tendría un impacto
-          significativo en la organización, afectando gravemente los procesos
-          críticos, causando problemas legales importantes y provocando
-          pérdidas financieras significativas.
+        Esta información contiene datos que, por sí mismos, pueden ser usados para identificar a un cliente de manera individualizada.
+         Es información altamente sensible y debe ser protegida rigurosamente para garantizar la privacidad y seguridad de los clientes.
         </p>
       </label>
     </div>
