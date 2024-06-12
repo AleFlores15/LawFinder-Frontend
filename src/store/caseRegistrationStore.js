@@ -55,6 +55,7 @@ export const useCaseStore = create((set, get) => ({
 
   departmentId: '',
   status: '',
+  isModalFinished: false,
   departamentos: [],
   provincias: [],
   instancias: [],
@@ -91,20 +92,16 @@ export const useCaseStore = create((set, get) => ({
   },
 
   registerCase: async () => { 
-   
-      if(get().formData.lawyerEmail == '' || get().formData.customerEmail == '' || get().formData.title == '' || 
-    get().formData.summary == '' || get().formData.counterpart == '' || get().formData.startDate == '' || 
-    get().formData.startDateInstance == '' || get().formData.endDateInstance == ''){
-      set({ status: 'emptyForm' });
-      console.log(get().formData);
-      return;
-    }
-  
-  
-    
 
+   
+    //   if(get().formData.lawyerEmail == '' || get().formData.customerEmail == '' || get().formData.title == '' || 
+    // get().formData.summary == '' || get().formData.counterpart == '' || get().formData.startDate == '' || 
+    // get().formData.startDateInstance == '' || get().formData.endDateInstance == ''){
+    //   set({ status: 'emptyForm' });
+    //   console.log(get().formData);
+    //   return;
+    // }
     const token = localStorage.getItem('token');
-    console.log(get().formData);
     const body = {
       "userId": get().getIdFromToken(),
       "idSubCategory": get().formData.subCategoryId,
@@ -119,21 +116,22 @@ export const useCaseStore = create((set, get) => ({
       "complainant": true,
       "counterpartName": get().formData.counterpart,
     };
+    
+    set({status: 'asset-form'});
+    console.log(get().status)
 
-
-
-    try{
-      const response = await axios.post(`${API_URL}/legalcase`, body,{
-        headers: {
-          'Content-Type': 'application/json', 
-          'Authorization': `Bearer ${token}` 
-        }
-      });
-        set({status: 'success'});
-     console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+    // try{
+    //   const response = await axios.post(`${API_URL}/legalcase`, body,{
+    //     headers: {
+    //       'Content-Type': 'application/json', 
+    //       'Authorization': `Bearer ${token}` 
+    //     }
+    //   });
+    //     set({status: 'success'});
+    //  console.log(response);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   },
   loadDepartamentos: async () => {
     try {

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import '../styles/RegisterCase.css';
 import Navbar from './Navbar';
 import { getRoleFromToken } from '../utils/getIdFromToken';
+import ClassificationForm from './kri/Form';
 
 
 const RegisterCase = () => {
@@ -235,6 +236,8 @@ const RegisterCase = () => {
               handleFormStateChanges('endDateInstance', event)} />
           </div>
         </div>
+        {status === 'asset-form' && <ClassificationForm></ClassificationForm>}
+
         <div className="button-row-rc">
           <button className="register-button-rc"  onClick={()=> {navigate("/Home")}}>Cancelar</button>
           <button type="submit" className="register-button">Registrar</button>  
